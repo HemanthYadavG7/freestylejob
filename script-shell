@@ -1,0 +1,5 @@
+cat createec2.sh
+
+chmod 777 createec2.sh
+
+./createec2.sh

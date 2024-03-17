@@ -1,0 +1,29 @@
+Jenkins is a tool used in software development to automate different tasks in the process of building, testing, and deploying software. Think of it like a helpful assistant that takes care of repetitive tasks so that developers can focus on writing code and improving their software.
+
+Continuous Integration (CI): Jenkins helps developers merge their code changes into a shared repository frequently, ensuring that all changes work well together. It automatically builds the project each time new code is added and alerts developers if there are any issues.
+
+Continuous Delivery (CD): Jenkins can automate the process of deploying software to various environments like testing, staging, and production. This ensures that the software can be delivered to users quickly and reliably.
+
+Automation: Jenkins allows you to automate almost any task related to software development, such as running tests, sending notifications, generating reports, and much more. This saves time and reduces the chance of human error.
+
+Extensibility: Jenkins is highly customizable and supports a wide range of plugins, allowing users to integrate it with other tools and services commonly used in the software development process.
+
+In simple terms, Jenkins helps make the life of developers easier by automating repetitive tasks, ensuring the quality of code, and speeding up the delivery of software to users.
+
+
+
+
+sudo apt-get update
+sudo apt-get install openjdk-11-jdk 
+sudo curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+sudo echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]   https://pkg.jenkins.io/debian-stable binary/ | sudo tee   /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+
+sudo apt-get install jenkins -y
+sudo systemctl start jenkins
+
+sudo systemctl status jenkins
+
+sudo systemctl enable jenkins
+
+cat /var/lib/jenkins/secrets/initialAdminPassword
